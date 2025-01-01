@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Driving School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        :root {
+    --primary: #D6A409;
+    --secondary: #FFEA00;
+    --dark: #090C14;
+    --light: #FFF6F6;
+    --gray: #6D6C6C;
+}
+
+/* Base Styles */
+/* Base Styles */
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: var(--light);
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link {
+    color: var(--light) !important;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Register Button */
+.register-btn {
+    text-decoration: none;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 7px;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    color: #000;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.register-btn:hover {
+    color: #ffcc00;
+    background-color: black;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    padding: 2rem 0;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.text-highlight {
+    color: var(--secondary);
+}
+
+.action-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 15px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.hero-section .btn-explore {
+    background-color: var(--secondary);
+    color: #000;
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-register {
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-explore {
+    background-color: var(--secondary);
+    color: #000;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-explore:hover,
+.hero-section .btn-register:hover {
+    color: #ffcc00;
+    background-color: black;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+
+/* Section */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    color: var(--light);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Feature Card */
+.feature-card {
+    background-color: var(--dark);
+    border-radius: 10px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-text {
+    color: #666C76;
+    margin-bottom: 0;
+}
+
+/* Course Card */
+.course-card {
+    background-color: var(--dark);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 0, 0.3);
+}
+
+.course-title {
+    color: var(--light);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.course-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #9CA3AF;
+    margin-bottom: 1.5rem;
+}
+
+.course-features {
+    margin-bottom: 2rem;
+}
+
+.course-features li {
+    color: #9CA3AF;
+    margin-bottom: 0.5rem;
+}
+
+/* Enroll Button */
+.btn-enroll {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: 600;
+    color: #000;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-enroll:hover {
+    color: #ffcc00;
+    background-color: black;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+    transform: translateY(-3px);
+}
+/* Service Card */
+.service-card {
+    background-color: var(--dark);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 0, 0.3);
+}
+
+.service-title {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+.service-text {
+    color: #9CA3AF;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: #666C76;
+    border-radius: 30px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 255, 0, 0.3);
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+    color: var(--light);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author h4 {
+    color: var(--light);
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: var(--secondary);
+}
+
+/* Contact Form */
+.contact-form .form-control {
+    background-color: #D9D9D9;
+    border: 3px solid #858585;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .form-label {
+    color: var(--light);
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    font-weight: 600;
+    color: #000;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:hover {
+    color: #ffcc00;
+    background-color: black;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+    transform: translateY(-3px);
+}
+/* Contact Info */
+.contact-info {
+    color: var(--light);
+    padding: 2rem;
+}
+
+.contact-info h3 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-details p {
+    margin-bottom: 1rem;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(214, 164, 9, 0.3);
+}
+
+
+
+
+.footer {
+    background-color: #000000;
+    padding: 2rem 0;
+    color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .hero-title {
+        .hero-title {
+        font-size: 3rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .feature-card,
+    .course-card,
+    .service-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .contact-info {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .feature-title {
+        font-size: 1.3rem;
+    }
+
+    .course-title {
+        font-size: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .feature-card,
+    .course-card,
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .register-btn,
+    .action-btn,
+    .feature-card,
+    .course-card,
+    .service-card,
+    .testimonial-card,
+    .social-link,
+    .btn-submit,
+    .btn-enroll {
+        transition: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .navbar-scrolled {
+        background-color: rgba(0, 0, 0, 0.98);
+    }
+
+    .form-control {
+        background-color: #333;
+        border-color: #666;
+        color: var(--light);
+    }
+
+    .form-control:focus {
+        background-color: #444;
+        border-color: var(--primary);
+        color: var(--light);
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: #000;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+[role="button"],
+button {
+    cursor: pointer;
+}
+
+[role="button"]:focus,
+button:focus {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px var(--primary);
+    border-color: var(--primary);
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="src\bzzz.png" alt="Driving School Logo" width="220" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" aria-label="Services">
+                            <i class="fas fa-car-side d-block d-lg-none me-2"></i>Service
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" aria-label="About">
+                            <i class="fas fa-info-circle d-block d-lg-none me-2"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials" aria-label="Testimonials">
+                            <i class="fas fa-star d-block d-lg-none me-2"></i>Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" aria-label="Contact" id="contact-link">
+                            <i class="fas fa-envelope d-block d-lg-none me-2"></i>Contact us
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-4">
+                        <a class="register-btn" href="#contact" aria-label="Register Now">
+                            <i class="fas fa-user-plus me-2"></i>Register Now
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="position: relative; overflow: hidden; height: 100vh;">
+        <!-- Background image -->
+        <img src="src/bg1.jpg" alt="Background" 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; z-index: 1; border-radius: 30px;">
+    
+        <div class="container" style="position: relative; z-index: 2; color: white; padding: 20px;">
+            <div class="row" style="display: flex; align-items: center; min-height: 100vh;">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 20px;">
+                            Together, We'll Make <span style="color: yellow;">Driving</span> Second Nature
+                        </h1>
+                        <div style="display: flex; gap: 20px; margin-top: 20px;">
+                            <!-- Explore Button -->
+                            <a class="btn-explore" href="#services" style="background-color: #ffcc00; color: black; border: #ffcc00; 
+    padding: 10px 20px; border-radius: 5px; cursor: pointer; text-decoration: none;">
+    <i class="fas fa-compass" style="margin-right: 5px;"></i>Explore
+</a>
+
+<!-- Register Button -->
+<a class="btn-register" href="#contact" style="background-color: black; color: #ffcc00; border: black; 
+    padding: 10px 20px; border-radius: 5px; cursor: pointer; text-decoration: none;">
+    <i class="fas fa-user-plus" style="margin-right: 5px;"></i>Register
+</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section id="features" class="section bg-dark" style="border-radius: 30px; overflow: hidden; margin-top: 30px;">
+        <div class="container">
+            <h2 class="section-title" aria-label="Why Choose Us">
+                <i class="fas fa-check-circle me-2"></i>Why Choose Us?
+            </h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <i class="fas fa-certificate feature-icon"></i>
+                        <h3 class="feature-title">Certified Instructors</h3>
+                        <p class="feature-text">Learn from experienced, state-certified driving instructors</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <i class="fas fa-clock feature-icon"></i>
+                        <h3 class="feature-title">Flexible Schedule</h3>
+                        <p class="feature-text">Choose from various time slots that fit your schedule</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <i class="fas fa-user-graduate feature-icon"></i>
+                        <h3 class="feature-title">Personalized Training</h3>
+                        <p class="feature-text">One-on-one instruction tailored to your learning pace</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <i class="fas fa-tachometer-alt feature-icon"></i>
+                        <h3 class="feature-title">Quick Progress</h3>
+                        <p class="feature-text">Complete your training in as little as 3 weeks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title" aria-label="Our Courses">
+                <i class="fas fa-graduation-cap me-2"></i>Our Courses
+            </h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="course-card">
+                        <h3 class="course-title">Beginner's Course</h3>
+                        <div class="course-meta">
+                            <div><i class="far fa-clock me-2"></i>4 weeks</div>
+                            <div><i class="fas fa-rupee-sign me-2"></i>900</div>
+                        </div>
+                        <ul class="course-features list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>20 hours practical training</li>
+                            <li><i class="fas fa-check me-2"></i>Theory classes included</li>
+                            <li><i class="fas fa-check me-2"></i>Mock test preparation</li>
+                            <li><i class="fas fa-check me-2"></i>Flexible scheduling</li>
+                        </ul>
+                        <button class="btn-enroll w-100" aria-label="Enroll in Beginner's Course" onclick="window.location.href='#contact';">
+                            <i class="fas fa-sign-in-alt me-2"></i>Enroll now
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="course-card">
+                        <h3 class="course-title">Refresher Course</h3>
+                        <div class="course-meta">
+                            <div><i class="far fa-clock me-2"></i>1 week</div>
+                            <div><i class="fas fa-rupee-sign me-2"></i>500</div>
+                        </div>
+                        <ul class="course-features list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>10 hours practical training</li>
+                            <li><i class="fas fa-check me-2"></i>Skill assessment</li>
+                            <li><i class="fas fa-check me-2"></i>Customized training plan</li>
+                            <li><i class="fas fa-check me-2"></i>Flexible scheduling</li>
+                        </ul>
+                        <button class="btn-enroll w-100" aria-label="Enroll in Refresher Course" onclick="window.location.href='#contact';">
+                            <i class="fas fa-sign-in-alt me-2"></i>Enroll now
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="course-card">
+                        <h3 class="course-title">Intensive Course</h3>
+                        <div class="course-meta">
+                            <div><i class="far fa-clock me-2"></i>2 weeks</div>
+                            <div><i class="fas fa-rupee-sign me-2"></i>1300</div>
+                        </div>
+                        <ul class="course-features list-unstyled">
+                            <li><i class="fas fa-check me-2"></i>30 hours practical training</li>
+                            <li><i class="fas fa-check me-2"></i>Daily theory sessions</li>
+                            <li><i class="fas fa-check me-2"></i>Priority test booking</li>
+                            <li><i class="fas fa-check me-2"></i>Weekend classes available</li>
+                        </ul>
+                        <button class="btn-enroll w-100" aria-label="Enroll in Intensive Course" onclick="window.location.href='#contact';">
+                            <i class="fas fa-sign-in-alt me-2"></i>Enroll now
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title" aria-label="Our Services">
+                <i class="fas fa-tools me-2"></i>Our Services
+            </h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h3 class="service-title">Safety Driving</h3>
+                        <img src="src\safety.jpg" alt="Safety Driving" class="service-image">
+                        <p class="service-text">Breakout believes in responsible use of Indian roads and that road safety education is paramount for all road users.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h3 class="service-title">Personal Training</h3>
+                        <img src="src\personal.jpg" alt="Personal Training" class="service-image">
+                        <p class="service-text">While other institutes club other clients together and conduct group trainings, we focus on personalized attention.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h3 class="service-title">RTO License</h3>
+                        <img src="src\licence.jpg" alt="RTO License" class="service-image">
+                        <p class="service-text">We help you apply for a driving license permit. Feel free to avail our services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h3 class="service-title">Prolonged Gear Life</h3>
+                        <img src="src\gear.jpg" alt="Prolonged Gear Life" class="service-image">
+                        <p class="service-text">Our techniques are meant to equip our clients to drive on Indian terrains, thereby prolonging the life of suspensions and tyres.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-dark" style="border-radius: 30px; overflow: hidden; margin-top: 30px;">
+        <div class="container">
+            <h2 class="section-title" aria-label="About Us">
+                <i class="fas fa-info-circle me-2"></i>About Us
+            </h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="about-title">Welcome to the Art of Driving</h3>
+                        <p class="about-text">Learning to drive is not just about getting a driving licence but is an essential skill for life. Whether you've just removed your L-plates, or are a bit more experienced but want to top up your driving skills, our specialist courses have got you covered.</p>
+                        <p class="about-text">Our instructors can tailor the tuition around your needs – whether you've just passed or are more experienced. Just let us know what you want to cover.</p>
+                        <button class="btn-enroll w-100" aria-label="Register" onclick="window.location.href='#contact';">
+                            <i class="fas fa-sign-in-alt me-2"></i>Register now
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="src\about.jpg" alt="About Us" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title" aria-label="Testimonials">
+                <i class="fas fa-quote-left me-2"></i>Testimonials
+            </h2>
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4">
+                    <div class="testimonial-card" style="text-align: center;">
+                        <!-- Gmail -->
+                        <p style="color: gray; font-size: 0.9rem; margin-bottom: 5px;">johndoe123@gmail.com</p>
+                        <p class="testimonial-text">This driving school offers excellent value for money. The packages were affordable, and the quality of teaching was top-notch.</p>
+                        <div class="testimonial-author">
+                            <h4>John Doe</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4">
+                    <div class="testimonial-card" style="text-align: center;">
+                        <!-- Gmail -->
+                        <p style="color: gray; font-size: 0.9rem; margin-bottom: 5px;">janesmith567@gmail.com</p>
+                        <p class="testimonial-text">As someone who was nervous about driving, I found the instructors here to be incredibly supportive and patient.</p>
+                        <div class="testimonial-author">
+                            <h4>Jane Smith</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4">
+                    <div class="testimonial-card" style="text-align: center;">
+                        <!-- Gmail -->
+                        <p style="color: gray; font-size: 0.9rem; margin-bottom: 5px;">mikejohnson999@gmail.com</p>
+                        <p class="testimonial-text">The mock tests were incredibly useful, and the instructor gave me detailed feedback after each one.</p>
+                        <div class="testimonial-author">
+                            <h4>Mike Johnson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" aria-label="Contact Us">
+                <i class="fas fa-envelope me-2"></i>Contact Us
+            </h2>
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <form class="contact-form" action="/submit-form" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required aria-label="Full Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required aria-label="Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required aria-label="Email Address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required aria-label="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit w-100" aria-label="Send Message">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3>Let's Get in Touch</h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-map-marker-alt me-2"></i>No. 42, Gopalakrishna Street<br>T. Nagar, Chennai<br>Tamil Nadu, 600017</p>
+                            <p><i class="fas fa-phone me-2"></i>+91 12345 67890</p>
+                            <p><i class="fas fa-envelope me-2"></i>info@drivingschool.com</p>
+                        </div>
+                        <!-- Social Media Links -->
+                        <div class="social-links mb-4">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        
+                        <!-- Map Section -->
+                        <div class="map-container" style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden;">
+                            <iframe 
+                                src="https://www.google.com/maps?q=Chennai,+Tamil+Nadu,+India&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                aria-label="Map of Chennai">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 Breakout Zone. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
